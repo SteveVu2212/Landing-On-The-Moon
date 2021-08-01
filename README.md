@@ -46,7 +46,7 @@ $$Pr{(A_t=a | S_t=s)} \hspace{0.1cm} \dot{=} \hspace{0.1cm} \frac{e^{Q(s, a)/\ta
 
 Learning the idea of planning from Dyna-Q that uses simulated experience to improve the value estimates, we would like to employ the <b>experience replay</b> method to make the agent more sample efficient when using function approximation. We simply save a buffer of experience and let the data be the model before using several samples from the buffer, called a mini batch, and updating the value function with those samples.
 
-# 3 Prerequisites
+# 3. Prerequisites
 It is highly recommended that you complete [Course 1: Fundamentals of Reinforcement Learning](https://www.coursera.org/learn/fundamentals-of-reinforcement-learning), [Course 2: Sample-Based Learning Methods](https://www.coursera.org/learn/sample-based-learning-methods) and [Course 3: Prediction and Control with Function Approximation](https://www.coursera.org/learn/prediction-control-function-approximation) before starting the project.
 
 You need some basic math knowledge including, basic knowledge and comfort with expected values, distributions, and sampling, as well as basic calculus (derivatives), linear algebra (vectors, matrices, inner products), functions.
