@@ -32,8 +32,8 @@ $$f(x) = max(0, x)$$
 
 Training the neural network is not easy as stochastic gradient descent is too slow. We will learn the advantage of the <b>ADAM optimizer</b> which combines adaptive vector stepsizes and momentum to speed up learning. The weights are updated as follows:
 
-$$ \mathbf{w_t} = \mathbf{w_{t-1}} + \frac{\alpha}{\sqrt{\mathbf{\hat{v}_t}} + \epsilon} \mathbf{\hat{m}_t}
-$$
+$$\mathbf{w_t} = \mathbf{w_{t-1}} + \frac{\alpha}{\sqrt{\mathbf{\hat{v}_t}} + \epsilon} \mathbf{\hat{m}_t}$$
+<img src = "https://latex.codecogs.com/gif.download?%5Cmathbf%7Bw_t%7D%20%3D%20%5Cmathbf%7Bw_%7Bt-1%7D%7D%20+%20%5Cfrac%7B%5Calpha%7D%7B%5Csqrt%7B%5Cmathbf%7B%5Chat%7Bv%7D_t%7D%7D%20+%20%5Cepsilon%7D%20%5Cmathbf%7B%5Chat%7Bm%7D_t%7D">
 
 where $\mathbf{\hat{m}}$ and $\mathbf{\hat{v}}$ are the unbiased estimates of the mean and second moment, $\mathbf{w}$ and $\mathbf{s}$, which are initialized to zero.
 
