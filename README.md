@@ -19,7 +19,7 @@ The state is composed of eight variables. It includes the XY position, the XY ve
 There are four possible actions as the agent can fire the main thruster, fire the left thruster, fire the right thruster, or do nothing on this step.
 About the reward function, we encourage the agent to move towards the goal, pile to the surface in a safe way, use fuel efficiently, and not fly off into outer space.
 
-https://user-images.githubusercontent.com/83741887/127781562-0f7f9c1a-8b01-486d-8967-66c0a9de1fa7.mp4
+https://user-images.githubusercontent.com/83741887/127781646-e6242455-dd4f-43f5-b1af-40a64917b07b.mp4
 
 ## 2.2 Choose the learning algorithm
 While the RL textbook, <b>Reinforcement Learning: An Introduction by Sutton and Barto</b>, and the RL Specialization provides informative surveys of RL algorithms, we need to find a well-fitted algorithm for the problem. By the end, <b>the Expected SARSA</b> is able to outperform other algorithms in the specific problem.
@@ -46,7 +46,7 @@ $$Pr{(A_t=a | S_t=s)} \hspace{0.1cm} \dot{=} \hspace{0.1cm} \frac{e^{Q(s, a)/\ta
 
 Learning the idea of planning from Dyna-Q that uses simulated experience to improve the value estimates, we would like to employ the <b>experience replay</b> method to make the agent more sample efficient when using function approximation. We simply save a buffer of experience and let the data be the model before using several samples from the buffer, called a mini batch, and updating the value function with those samples.
 
-# 3 Prerequisites
+# 3. Prerequisites
 It is highly recommended that you complete [Course 1: Fundamentals of Reinforcement Learning](https://www.coursera.org/learn/fundamentals-of-reinforcement-learning), [Course 2: Sample-Based Learning Methods](https://www.coursera.org/learn/sample-based-learning-methods) and [Course 3: Prediction and Control with Function Approximation](https://www.coursera.org/learn/prediction-control-function-approximation) before starting the project.
 
 You need some basic math knowledge including, basic knowledge and comfort with expected values, distributions, and sampling, as well as basic calculus (derivatives), linear algebra (vectors, matrices, inner products), functions.
