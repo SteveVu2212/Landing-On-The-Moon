@@ -19,7 +19,7 @@ The state is composed of eight variables. It includes the XY position, the XY ve
 There are four possible actions as the agent can fire the main thruster, fire the left thruster, fire the right thruster, or do nothing on this step.
 About the reward function, we encourage the agent to move towards the goal, pile to the surface in a safe way, use fuel efficiently, and not fly off into outer space.
 
-https://user-images.githubusercontent.com/83741887/127781562-0f7f9c1a-8b01-486d-8967-66c0a9de1fa7.mp4
+https://user-images.githubusercontent.com/83741887/127781646-e6242455-dd4f-43f5-b1af-40a64917b07b.mp4
 
 ## 2.2 Choose the learning algorithm
 While the RL textbook, <b>Reinforcement Learning: An Introduction by Sutton and Barto</b>, and the RL Specialization provides informative surveys of RL algorithms, we need to find a well-fitted algorithm for the problem. By the end, <b>the Expected SARSA</b> is able to outperform other algorithms in the specific problem.
