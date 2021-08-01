@@ -31,18 +31,12 @@ The Expected SARSA is to deal with continuous state variables and episodic learn
 ## 2.3 Make design choices
 Which function approximation will be employed is one of the most important decision as the number of features grows exponentially with the input dimension. Using neural network is the best choice for the problem. Besides setting the neural network’s parameters, picking an effective activation function is critical. By the end, we go ahead with <b>ReLUs function</b> as it avoids the issue of saturation in neural networks.
 
-<!-- $$f(x) = max(0, x)$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div>
-
-<div align="center"><img style="background: white;" src="https://latex.codecogs.com/svg.latex?P(x)%20%3D%20%5Cfrac%7B1%7D%7B%5Csigma%5Csqrt%7B2%5Cpi%7D%7D%20e%5E%7B%5Cfrac%7B-(x-%5Cmu)%5E2%7D%7B2%5Csigma%5E2%7D%7D"></div>
-
+$$f(x) = max(0, x)$$
 
 Training the neural network is not easy as stochastic gradient descent is too slow. We will learn the advantage of the <b>ADAM optimizer</b> which combines adaptive vector stepsizes and momentum to speed up learning. The weights are updated as follows:
 
-<!-- $$\mathbf{w_t} = \mathbf{w_{t-1}} + \frac{\alpha}{\sqrt{\mathbf{\hat{v}_t}} + \epsilon} \mathbf{\hat{m}_t}$$ --> 
-
-<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div>
+$$\mathbf{w_t} = \mathbf{w_{t-1}} + \frac{\alpha}{\sqrt{\mathbf{\hat{v}_t}} + \epsilon} \mathbf{\hat{m}_t}
+$$
 
 where $\mathbf{\hat{m}}$ and $\mathbf{\hat{v}}$ are the unbiased estimates of the mean and second moment, $\mathbf{w}$ and $\mathbf{s}$, which are initialized to zero.
 
