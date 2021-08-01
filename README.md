@@ -33,13 +33,13 @@ Which function approximation will be employed is one of the most important decis
 
 <!-- $$f(x) = max(0, x)$$ --> 
 
-<div align="center"><img style="background: white;" src="svg/6s6Lf9j3on.svg"></div>
+<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div>
 
 Training the neural network is not easy as stochastic gradient descent is too slow. We will learn the advantage of the <b>ADAM optimizer</b> which combines adaptive vector stepsizes and momentum to speed up learning. The weights are updated as follows:
 
 <!-- $$\mathbf{w_t} = \mathbf{w_{t-1}} + \frac{\alpha}{\sqrt{\mathbf{\hat{v}_t}} + \epsilon} \mathbf{\hat{m}_t}$$ --> 
 
-<div align="center"><img style="background: white;" src="svg/0G1u1gkJRC.svg"></div>
+<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math="></div>
 
 where $\mathbf{\hat{m}}$ and $\mathbf{\hat{v}}$ are the unbiased estimates of the mean and second moment, $\mathbf{w}$ and $\mathbf{s}$, which are initialized to zero.
 
