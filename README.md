@@ -24,7 +24,7 @@ While the RL textbook, <b>Reinforcement Learning: An Introduction by Sutton and 
 
 The Expected SARSA is to deal with continuous state variables and episodic learning process of the problem. It is also beneficial as we are able to update the policy and value function on every time step before the end of the episode with the algorithm. Finally, the Expected SARSA allows us to learn an optimal epsilon soft policy that is more robust than learning a deterministic policy.
 
-![Learning Algorithm](/Images/Learning Algorithm.png)
+![](/Images/Learning Algorithm.png)
 
 ## 2.3 Make design choices
 Which function approximation will be employed is one of the most important decision as the number of features grows exponentially with the input dimension. Using neural network is the best choice for the problem. Besides setting the neural network’s parameters, picking an effective activation function is critical. By the end, we go ahead with <b>ReLUs function</b> as it avoids the issue of saturation in neural networks.
