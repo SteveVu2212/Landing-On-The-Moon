@@ -19,11 +19,14 @@ The state is composed of eight variables. It includes the XY position, the XY ve
 There are four possible actions as the agent can fire the main thruster, fire the left thruster, fire the right thruster, or do nothing on this step.
 About the reward function, we encourage the agent to move towards the goal, pile to the surface in a safe way, use fuel efficiently, and not fly off into outer space.
 
+https://user-images.githubusercontent.com/83741887/127781562-0f7f9c1a-8b01-486d-8967-66c0a9de1fa7.mp4
+
 ## 2.2 Choose the learning algorithm
 While the RL textbook, <b>Reinforcement Learning: An Introduction by Sutton and Barto</b>, and the RL Specialization provides informative surveys of RL algorithms, we need to find a well-fitted algorithm for the problem. By the end, <b>the Expected SARSA</b> is able to outperform other algorithms in the specific problem.
 
 The Expected SARSA is to deal with continuous state variables and episodic learning process of the problem. It is also beneficial as we are able to update the policy and value function on every time step before the end of the episode with the algorithm. Finally, the Expected SARSA allows us to learn an optimal epsilon soft policy that is more robust than learning a deterministic policy.
 
+![](https://github.com/SteveVu2212/LandingOnTheMoon/blob/main/Images/Learning%20Algorithm.png)
 
 ## 2.3 Make design choices
 Which function approximation will be employed is one of the most important decision as the number of features grows exponentially with the input dimension. Using neural network is the best choice for the problem. Besides setting the neural network’s parameters, picking an effective activation function is critical. By the end, we go ahead with <b>ReLUs function</b> as it avoids the issue of saturation in neural networks.
