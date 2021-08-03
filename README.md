@@ -49,4 +49,3 @@ Learning the idea of planning from Dyna-Q that uses simulated experience to impr
 # 3. Prerequisites
 It is highly recommended that you complete [Course 1: Fundamentals of Reinforcement Learning](https://www.coursera.org/learn/fundamentals-of-reinforcement-learning), [Course 2: Sample-Based Learning Methods](https://www.coursera.org/learn/sample-based-learning-methods) and [Course 3: Prediction and Control with Function Approximation](https://www.coursera.org/learn/prediction-control-function-approximation) before starting the project.
 
-You need some basic math knowledge including, basic knowledge and comfort with expected values, distributions, and sampling, as well as basic calculus (derivatives), linear algebra (vectors, matrices, inner products), functions.
