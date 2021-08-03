@@ -31,18 +31,17 @@ The Expected SARSA is to deal with continuous state variables and episodic learn
 ## 2.3 Make design choices
 Which function approximation will be employed is one of the most important decision as the number of features grows exponentially with the input dimension. Using neural network is the best choice for the problem. Besides setting the neural network’s parameters, picking an effective activation function is critical. By the end, we go ahead with <b>ReLUs function</b> as it avoids the issue of saturation in neural networks.
 
-$$f(x) = max(0, x)$$
+![](https://github.com/SteveVu2212/LandingOnTheMoon/blob/main/Images/ReLUs%20activation%20func.png)
 
 Training the neural network is not easy as stochastic gradient descent is too slow. We will learn the advantage of the <b>ADAM optimizer</b> which combines adaptive vector stepsizes and momentum to speed up learning. The weights are updated as follows:
 
-$$\mathbf{w_t} = \mathbf{w_{t-1}} + \frac{\alpha}{\sqrt{\mathbf{\hat{v}_t}} + \epsilon} \mathbf{\hat{m}_t}
-$$
+![](https://github.com/SteveVu2212/LandingOnTheMoon/blob/main/Images/ADAM%20update.png)
 
-where $\mathbf{\hat{m}}$ and $\mathbf{\hat{v}}$ are the unbiased estimates of the mean and second moment, $\mathbf{w}$ and $\mathbf{s}$, which are initialized to zero.
+where <img src="https://render.githubusercontent.com/render/math?math=$\mathbf{\hat{m}}$"> and <img src="https://render.githubusercontent.com/render/math?math=$\mathbf{\hat{v}}$"> are the unbiased estimates of the mean and second moment, <img src="https://render.githubusercontent.com/render/math?math=$\mathbf{w}$"> and <img src="https://render.githubusercontent.com/render/math?math=$\mathbf{s}$">, which are initialized to zero.
 
 The exploration – exploitation tradeoff is a fundamental problem in Reinforcement Learning. While it is difficult to maintain the effect of optimistic initial values on exploration when using neural networks, the epsilon greedy approach has a downside of ignoring the information about the action values. <b>Softmax policy</b> is the best choice as the probability of selecting an action is proportional to the value of the action. Notably, we subtract the maximum action value from the action values to avoid overflow.
 
-$$Pr{(A_t=a | S_t=s)} \hspace{0.1cm} \dot{=} \hspace{0.1cm} \frac{e^{Q(s, a)/\tau - max_{c}Q(s, c)/\tau}}{\sum_{b\in A}e^{Q(s, b)/\tau - max_{c}Q(s, c)/\tau}}$$
+![](https://github.com/SteveVu2212/LandingOnTheMoon/blob/main/Images/Softmax%20funcs.png)
 
 Learning the idea of planning from Dyna-Q that uses simulated experience to improve the value estimates, we would like to employ the <b>experience replay</b> method to make the agent more sample efficient when using function approximation. We simply save a buffer of experience and let the data be the model before using several samples from the buffer, called a mini batch, and updating the value function with those samples.
 
